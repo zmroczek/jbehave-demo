@@ -1,4 +1,4 @@
-package zmroczek;
+package zmroczek.helloWorld;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -11,12 +11,12 @@ public class HelloController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String showLinkToNextPage() {
-        return "hello";
+        return "index";
     }
 
     @RequestMapping("nextPage")
 	public String printWelcome(ModelMap model) {
-		model.addAttribute("message", "Hello world!");
-		return "nextPage";
+		model.addAttribute("helloWorld", "Hello world!");
+		return "helloWorld";
 	}
 }
